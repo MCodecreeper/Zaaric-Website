@@ -1,0 +1,899 @@
+﻿/* Global Styles */
+.home-container {
+	top:0;
+	font-family: "Poppins", sans-serif;
+	background: #0a0a0a;
+	color: #ffffff;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/* Hero Section */
+.hero {
+	height: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	background-color: black;
+}
+
+.hero-bg {
+	position: absolute;
+	top: 0;
+	left: -19rem;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.circle-bg {
+	width: 140%;
+	height: 115%;
+	object-fit: contain;
+	animation: initialScaleAndRotate 2s ease-in-out forwards, rotateCircle 20s linear infinite 2s;
+	opacity: 0.8; /* Adjust opacity for a subtle effect */
+	transform-origin: center center; /* Ensure scaling and rotation happen from the center */
+}
+
+@keyframes initialScaleAndRotate {
+	0% {
+		transform: scale(0.5) rotate(0deg); /* Start small and rotate faster */
+	}
+
+	100% {
+		transform: scale(1) rotate(360deg); /* Scale up to original size and complete one full rotation */
+	}
+}
+
+@keyframes rotateCircle {
+	0% {
+		transform: scale(1) rotate(0deg); /* Maintain original size and rotate steadily */
+	}
+
+	100% {
+		transform: scale(1) rotate(360deg); /* Complete one full rotation */
+	}
+}
+
+.hero-content {
+	position: relative;
+	z-index: 2;
+	max-width: 850px;
+	animation: fadeInUp 1s ease-in-out;
+}
+
+.heroMainText img {
+	margin-top: 8rem;
+	margin-bottom: 2rem;
+}
+
+.hero h2 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	background: linear-gradient(90deg, #ffffff, #ffffff);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-ms-background-clip: text;
+	-o-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.hero p {
+	font-size: 1.5rem;
+	margin-top: 15px;
+	opacity: 0.85;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-btn {
+	margin-top: 30px;
+	background: linear-gradient(90deg, #ff512f, #ff9f1c);
+	color: #ffffff;
+	border: none;
+	padding: 14px 50px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.3s ease;
+	border-radius: 30px;
+	box-shadow: 0 5px 15px rgba(255, 81, 47, 0.4);
+}
+
+	.cta-btn:hover {
+		transform: scale(1.03);
+		filter: brightness(1.05);
+	}
+
+/* Services Section */
+ /* =================== Services Section =================== */
+.services {
+	padding: 120px 20px;
+	background: linear-gradient(135deg, #0a0a0a, #121212, #2ec4b6); /* 🔥 Replace with your actual image */
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed; /* Optional: Creates a cool parallax effect */
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	margin-top: 10rem;
+	margin-bottom: 10rem;
+}
+
+/* ✨ Animated Background Waves */
+.services::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+/* 🔥 Section Heading */
+.services h2 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+/* 📌 Services Grid - 3 Cards per Row (PC) */
+.service-cards {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(320px, 1fr)); /* 3 Cards in a row */
+	gap: 40px;
+	justify-content: center;
+	padding-top: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+/* 🚀 Service Cards - Modern Glassmorphic Effect */
+.service-card {
+	background: rgba(255, 255, 255, 0.06);
+	color: #ffffff;
+	padding: 50px;
+	border-radius: 18px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+	box-shadow: 0px 15px 30px rgba(46, 196, 182, 0.15);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+}
+
+	/* ✨ Floating Neon Glow */
+	.service-card::before {
+		content: "";
+		position: absolute;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(circle, rgba(46, 196, 182, 0.15) 20%, transparent 80%);
+		top: -50%;
+		left: -50%;
+		transition: transform 0.4s ease-in-out;
+		z-index: 1;
+	}
+
+	/* 🌟 Card Hover - Lift & Glow */
+	.service-card:hover {
+		transform: translateY(-12px) scale(1.05);
+		background: rgba(255, 255, 255, 0.08);
+		box-shadow: 0px 20px 45px #2ec4b6;
+	}
+
+		.service-card:hover::before {
+			transform: scale(1.3);
+		}
+
+	/* 🎨 Card Title */
+	.service-card h3 {
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 15px;
+		color: #ff9f1c;
+		position: relative;
+		z-index: 2;
+	}
+
+	/* 📝 Card Text */
+	.service-card p {
+		font-size: 1.2rem;
+		opacity: 0.85;
+		position: relative;
+		z-index: 2;
+	}
+
+/* 💡 Icons in Service Cards */
+.srvc_logo {
+	margin-top: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+	.srvc_logo h3 {
+		font-size: 1.5rem;
+		color: rgba(255, 255, 255, 0.85);
+	}
+
+/* 🏆 Entrance Animation */
+.service-card {
+	opacity: 0;
+	transform: translateY(30px);
+	animation: fadeInUp 0.6s ease forwards;
+}
+
+/* 🔥 Fade-In Animation */
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* 📱 Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+	.service-cards {
+		grid-template-columns: repeat(2, minmax(320px, 1fr)); /* 2 cards per row on tablets */
+	}
+}
+
+
+	
+	/* Client-Tailored Solutions Section */
+	.tailored {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 80px 10%;
+		min-height: 100vh;
+		background: linear-gradient(310deg, #2ec4b6, #e5e5e5);
+		border-radius: 100px 100px 100px 100px;
+		position: relative;
+		overflow: hidden;
+		z-index: 3;
+		
+	}
+
+	.tailored-text {
+		flex: 1;
+		max-width: 50%;
+		color: white;
+		animation: fadeInLeft 1s ease-in-out;
+	}
+
+		.tailored-text h2 {
+			font-size: 2.5rem;
+			font-weight: bold;
+			color: #ff9800;
+			margin-bottom: 20px;
+		}
+
+		.tailored-text p {
+			font-size: 1.2rem;
+			line-height: 1.6;
+			color: black;
+			margin-bottom: 25px;
+		}
+
+	.tailored-img {
+		flex: 1;
+		max-width: 45%;
+		text-align: right;
+		animation: fadeInRight 1s ease-in-out;
+	}
+
+		.tailored-img img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 20px;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s ease-in-out;
+		}
+
+			.tailored-img img:hover {
+				transform: scale(1.07);
+			}
+
+	/* About Section */
+	.about {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 100px 10%;
+		min-height: 800px;
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+		position: relative;
+		overflow: hidden;
+		background-color: #fdfffc;
+		margin-top: 10rem;
+	}
+
+	.about-content {
+		flex: 1;
+		max-width: 50%;
+		color: black;
+		animation: fadeInUp 1s ease-in-out;
+	}
+
+		.about-content h2 {
+			font-size: 3rem;
+			font-weight: bold;
+			color: #ff9800;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		.about-content p {
+			font-size: 1.2rem;
+			line-height: 1.8;
+			color: black;
+			margin-bottom: 30px;
+		}
+
+	.cta-button {
+		display: inline-block;
+		background: #ff9800;
+		color: white;
+		padding: 14px 28px;
+		border-radius: 50px;
+		font-size: 1.2rem;
+		font-weight: bold;
+		transition: all 0.3s ease-in-out;
+		box-shadow: 0 4px 20px rgba(255, 152, 0, 0.4);
+		text-transform: uppercase;
+	}
+
+		.cta-button:hover {
+			background: #e68900;
+			transform: scale(1.1);
+			box-shadow: 0 6px 25px rgba(255, 152, 0, 0.5);
+		}
+
+	.about-image {
+		flex: 1;
+		max-width: 45%;
+		text-align: right;
+		animation: fadeInRight 1s ease-in-out;
+	}
+
+		.about-image img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 30px;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s ease-in-out;
+		}
+
+			.about-image img:hover {
+				transform: scale(1.05);
+			}
+
+	/* Special Packages Section */
+	.special-packages {
+		padding: 100px 20px;
+		background: linear-gradient(310deg, #1a1a1a, #0a0a0a);
+		text-align: center;
+		min-height: 600px;
+		margin-bottom: 10rem;
+	}
+
+		.special-packages h2 {
+			font-size: 3rem;
+			color: #ffffff;
+			margin-bottom: 30px;
+			text-transform: uppercase;
+		}
+
+			.special-packages h2 span {
+				background: linear-gradient(90deg, #ff512f, #ff9f1c);
+				-webkit-background-clip: text; /* Clips background to text */
+				-webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+				display: inline-block; /* Ensures the effect applies properly */
+			}
+
+		.special-packages p {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.85);
+			margin-bottom: 50px;
+		}
+
+	.package-cards {
+		margin-top: 7rem;
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+		flex-wrap: wrap;
+	}
+
+	.package-card {
+		background: rgba(255, 255, 255, 0.05);
+		color: #ffffff;
+		padding: 20px;
+		width: 250px;
+		border-radius: 15px;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+		.package-card img {
+			width: 100%;
+			border-radius: 10px;
+			margin-bottom: 15px;
+		}
+
+		.package-card h3 {
+			font-size: 1.5rem;
+			margin-bottom: 10px;
+			color: #ff9f1c;
+		}
+
+		.package-card p {
+			padding-left: 10px;
+			padding-top: 30px;
+			font-size: 1rem;
+			opacity: 0.9;
+			width: 100%;
+			height: 100px;
+			text-align: left ;
+		}
+
+		#social_media_influencer {
+			padding-top: 10px;
+		}
+
+		.package-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+		}
+
+	/* Footer Section */
+	.footer {
+		background: #0a0a0a;
+		color: white;
+		padding: 80px 20px 40px;
+		text-align: center;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.footer-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	.footer-logo h2 {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+		background: linear-gradient(90deg, #ff512f, #ff9f1c);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+
+	.footer-logo p {
+		font-size: 1rem;
+		opacity: 0.8;
+	}
+
+	.footer-links {
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+		.footer-links a {
+			color: white;
+			text-decoration: none;
+			font-size: 1.3rem;
+			transition: opacity 0.3s ease, color 0.3s ease;
+		}
+
+			.footer-links a:hover {
+				color: #ff9f1c;
+				opacity: 0.9;
+			}
+
+	.footer-social {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		align-items: flex-start;
+	}
+
+		.footer-social a {
+			color: white;
+			font-size: 1.3rem;
+			transition: color 0.3s ease, transform 0.3s ease;
+			text-decoration: none;
+		}
+
+			.footer-social a:hover {
+				color: #ff9f1c;
+				transform: translateY(-5px);
+			}
+
+	.footer-bottom {
+		margin-top: 50px;
+		font-size: 0.9rem;
+		opacity: 0.7;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		padding-top: 20px;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.hero {
+			height: 700px;
+		}
+
+			.hero h2 {
+				font-size: 2rem;
+			}
+
+			.hero p {
+				font-size: 1.2rem;
+				width: 80%;
+				text-align: center;
+				margin-left: 10%;
+			}
+
+		.heroMainText img {
+			transform: scale(0.7);
+		}
+
+		.hero h2 {
+			font-size: 1.5rem;
+		}
+
+		.hero-bg {
+			position: absolute;
+			top: 0;
+			left: 0rem;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			overflow: hidden;
+			
+		}
+
+		.circle-bg {
+			position: relative;
+			right: 15.50rem;
+			width: 230%;
+			height: 115%;
+			object-fit: contain;
+			opacity: 0.8; /* Adjust opacity for a subtle effect */
+			transform-origin: center center; /* Ensure scaling and rotation happen from the center */
+		}
+
+		.cta-btn {
+			padding: 12px 40px;
+			font-size: 1rem;
+		}
+
+		.services h2 {
+			font-size: 2.5rem;
+		}
+
+		.service-card {
+			width: 100%;
+			padding: 20px;
+		}
+
+		.tailored {
+			flex-direction: column;
+			padding: 50px 20px;
+			border-radius:0px;
+			height: 100vh;
+			
+			
+		}
+
+		.tailored-text {
+			margin-top: 2rem;
+			max-width: 100%;
+			text-align: center;
+			padding-top: -2rem;
+		}
+
+		.tailored-img {
+			max-width: 100%;
+			margin-top: 20px;
+		}
+
+
+
+		.special-packages h2 {
+			font-size: 2.5rem;
+		}
+
+		.package-cards {
+			margin-top: 3rem;
+		}
+
+		.package-card {
+			width: 100%;
+		}
+
+		.footer-container {
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+		}
+
+		.footer-links {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.footer-social {
+			align-items: center;
+			flex-direction:row;
+		}
+
+		.footer-links a{
+			font-size:1.2rem;
+		}
+
+		.footer-social a{
+			font-size: 1.2rem;
+		}
+
+		.special-packages h2 {
+			font-size: 1.8rem;
+			margin-bottom: 15px;
+		}
+
+		.special-packages {
+			margin-top: 4rem;
+		}
+
+			.special-packages p {
+				font-size: 1.2rem;
+			}
+
+		.package-card h3 {
+			font-size: 1.5rem;
+		}
+
+
+
+		
+		.tailored {
+			padding: 60px 7%;
+			min-height: auto;
+			border-radius:0px;
+		}
+
+		/* Gradient Overlay */
+		.tailored::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(310deg, rgba(46, 196, 182, 0.85), rgba(229, 229, 229, 0.6));
+			z-index: 1;
+			border-radius:0px;
+		}
+
+		/* Ensuring Content Stays Above Overlay */
+		.tailored-text,
+		.tailored-img {
+			position: relative;
+			z-index: 2;
+		}
+
+		.tailored-text {
+			max-width: 100%;
+			text-align: center;
+			color: white;
+		}
+
+			.tailored-text h2 {
+				font-size: 2rem;
+				color: #ff9800;
+			}
+
+			.tailored-text p {
+				font-size: 1.2rem;
+			}
+		.service-cards {
+			grid-template-columns: 1fr; /* 1 card per row on mobile */
+		}
+
+		.services h2 {
+			font-size: 2.5rem;
+		}
+
+		.service-card h3 {
+			font-size: 1.6rem;
+		}
+
+		.tailored-img {
+			/* Set Background Image */
+			background-size: cover;
+			position: absolute;
+			top:-20px;
+			left:30px;
+			width: 100%;
+			height: 100%;
+			z-index:-1;
+			align-content:center;
+			align-items:center;
+			border-radius: 20px;
+			transform:scale(2.3);
+		}
+
+
+	}
+
+
+
+	@media (max-width: 1024px) {
+		.tailored {
+			flex-direction: column;
+			align-items: center;
+			padding: 60px 7%;
+			border-radius: 20px;
+			min-height: auto;
+		}
+
+		.tailored-text {
+			max-width: 100%;
+			text-align: center;
+		}
+
+			.tailored-text h2 {
+				font-size: 2rem;
+			}
+
+			.tailored-text p {
+				font-size: 1.2rem;
+			}
+
+		.tailored-img {
+			max-width: 80%;
+			text-align: center;
+		}
+
+			.tailored-img img {
+				width: 100%;
+			}
+
+		
+	}
+	@media (max-width: 1024px) and (orientation: landscape) {
+		.hero {
+			min-height: 120vh;
+			padding: 80px 5%;
+		}
+	
+
+		.heroMainText img {
+			transform: scale(0.6);
+			margin-top: -2rem;
+		}
+
+		.hero-bg {
+			height: 100%;
+			padding-right: 9.5em;
+			padding-top: -50rem;
+			
+		}
+
+		.circle-bg {
+			width: 250%;
+			height: 130%;
+			right: 18rem;
+		}
+
+		.tailored {
+			min-height: 120vh;
+			padding: 40px 5%;
+			flex-direction: row;
+			gap: 2rem;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.tailored-text {
+			max-width: 45%;
+			text-align: center;
+		}
+
+		.tailored-img {
+			max-width: 45%;
+		}
+
+		.tailored-img img {
+			max-height: 70vh;
+			object-fit: cover;
+		}
+
+		.service-cards {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+			padding: 0 3%;
+		}
+
+		.package-cards {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			padding: 0 3%;
+			gap: 1.5rem;
+		}
+
+		.package-card {
+			min-width: 280px;
+		}
+	}
+	
+	/**/
+	/* Initial state for sections (hidden below the viewport) */
+.services,
+.special-packages,
+.tailored,
+.about-section {
+    opacity: 0;
+    transform: translateY(100px); /* Start 100px below */
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+/* Animation when section is in view */
+.services.slide-in,
+.special-packages.slide-in,
+.tailored,
+.about-section.slide-in {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to original position */
+}
+
+/* Optional: Add some spacing and styling for better visuals */
+.services,
+.special-packages,
+.tailored,
+.about-section {
+    padding: 50px 20px;
+    margin-bottom: 40px;
+}
+
+/* Ensure cards inside sections animate smoothly */
+.service-cards,
+.package-cards,
+.tailored-text,
+.tailored-img,
+.about-section {
+    transition: all 0.7s ease-out;
+}

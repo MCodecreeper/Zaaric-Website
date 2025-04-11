@@ -1,0 +1,121 @@
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+    text-align: center;
+    color: #ffffff;
+}
+
+    .contact h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #ff512f, #ff9f1c);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .contact p {
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+        opacity: 0.9;
+    }
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #757575ff;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .dropDown{
+        color: black;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #ff9f1c;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+        }
+
+    .form-group select {
+        appearance: none;
+        background: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat right 15px center;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 150px;
+    }
+
+.submit-btn {
+    background: linear-gradient(90deg, #ff512f, #ff9f1c);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 81, 47, 0.4);
+    }
+
+/* Success Message */
+.success-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    border-radius: 10px;
+    color: #00ff00;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.select-package{
+    width:100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 678px){
+ 
+    .contact {
+        margin-top: -5rem;
+    }
+
+    }

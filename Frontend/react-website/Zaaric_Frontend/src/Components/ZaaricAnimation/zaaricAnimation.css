@@ -1,0 +1,48 @@
+.zaaric-container {
+    position: relative;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    width: 110%;
+    background: #1a1a1a; /* Dark background for contrast */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin-top: 10rem;
+}
+
+.zaaric-heading {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: -9rem;
+}
+
+.letter {
+    display: inline-block;
+    transform-origin: center bottom; /* Rotate from the bottom */
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    color: #888;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .zaaric-heading {
+        font-size:3rem;
+        margin-top:2rem;
+    }
+    .sub-heading {
+        font-size:1rem;
+    }
+    }
+    .zaaric-container {
+        margin-left: -25px;
+     
+    }

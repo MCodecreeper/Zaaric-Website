@@ -1,0 +1,108 @@
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    min-height: 800px;
+    width: 110%;    
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    background-color: #fdfffc;
+    margin-top: -11rem;
+    margin-left: -2rem;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 50%;
+    color: black;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+    .about-content h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ff9800;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: black;
+        margin-bottom: 30px;
+        text-align:justify;
+    }
+
+.cta-button {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.4);
+    text-transform: uppercase;
+}
+
+    .cta-button:hover {
+        background: #e68900;
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(255, 152, 0, 0.5);
+    }
+
+.about-image {
+    flex: 1;
+    max-width: 45%;
+    text-align: right;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+
+@media(max-width:678px){
+    .about {
+        margin-top:-1rem;
+        margin-left: -0.5rem;
+        flex-direction: column;
+        padding: 40px 20px;
+        padding-left: 20px;
+        padding-top: 5rem;
+    }
+
+    .about-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-top: 5rem;
+        transform:scale(1);
+        border-radius:30px;
+    }
+
+    .about-content h2 {
+        margin-top:5rem;
+        font-size: 2rem;
+    }
+}

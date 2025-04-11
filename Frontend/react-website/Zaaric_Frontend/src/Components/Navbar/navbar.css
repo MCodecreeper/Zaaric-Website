@@ -1,0 +1,231 @@
+header {
+    background: linear-gradient(135deg, rgba(1, 22, 39, 0.85) 25%, rgba(46, 196, 182, 0.4) 75%);
+    backdrop-filter: blur(15px); /* Increased blur for a stronger glass effect */
+    border-bottom: 2px solid rgba(255, 159, 28, 0.4); /* More pronounced orange tint */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    padding: 10px 0; /* Reduced padding */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navBar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures proper alignment */
+    padding: 0 20px;
+    height: 60px; /* Fixed height */
+}
+
+.navMenu li:focus, .navMenu li:active {
+    outline: none;
+    background: none;
+    box-shadow: none;
+}
+
+
+.navMenu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+    /* Individual Menu Items */
+    
+
+        .navMenu li {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 5px 12px; /* Reduced padding */
+            display: block;
+            position: relative;
+        }
+        .navMenu li a{
+            color: white;
+        }
+
+
+            /* Hover Effect */
+            .navMenu li :hover {
+                color: #2ec4b6;
+            }
+
+            /* Active Line Effect */
+            .navMenu li ::after {
+                content: "";
+                width: 80%;
+                height: 2px;
+                background: #ff9f1c;
+                position: absolute;
+                left: 4px;
+                bottom: -5px;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .navMenu li :hover::after {
+                transform: scaleX(1);
+            }
+
+
+
+/* Portfolio button */
+
+.pf_1{
+    margin-left: 10rem;
+    text-decoration:none;
+
+}
+
+
+.pf section {
+    background: linear-gradient(90deg, #ff512f, #ff9f1c);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove any default box shadow */
+}
+
+    .pf section:hover {
+        transform: scale(1.05);
+    }
+
+.pf li ::after {
+    content: none;
+    display:none;
+}
+.pf li:hover {
+    all: unset; /* Removes all inherited styles */
+    pointer-events:none;
+}
+
+
+    .pf section a {
+        color: white; /* Ensure the link text is white */
+        text-decoration: none; /* Remove underline */
+    }
+
+        .pf section a:hover {
+            color: white; /* Ensure the link text remains white on hover */
+        }
+
+
+
+@keyframes slideIn {
+    from {
+        right: -250px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: -250px;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden */
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: linear-gradient(135deg, #2ec4b6, #ffffff);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.5s ease-in-out; /* Smooth transition */
+}
+
+.show-sidebar {
+    right: 0;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.sidebar:not(.show-sidebar) {
+    animation: slideOut 0.5s ease-in-out forwards;
+}
+
+.sidebar li{
+    width: 100%;
+
+}
+.sidebar li a:hover{
+    color: #ffffff;
+}
+    .sidebar li:hover {
+        background: #ff9d1c;
+    }
+
+/* Responsive Design */
+
+{ /*For Mobile screen */
+}
+@media screen and (max-width: 780px) {
+    .hidePCnavOnMobile {
+        display: none
+    }
+    .logo{
+       transform:scale(0.7)
+    }
+    .navBar{
+        height: 40px;
+    }
+
+}
+
+{/*For PC screen */}
+@media screen and (min-width: 780px) {
+    .showOnMobile{
+        display: none;
+    }
+
+}
+.sidebar li {
+    text-align: left;
+    padding-left: 20px; /* Add some padding on the left for better spacing */
+}
+
+.sidebar li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+@media screen and (min-width: 780px) {
+    .sidebar {
+        display: none !important; /* Force hide sidebar on desktop */
+    }
+
+    /* Prevent sidebar animations from running on desktop */
+    .sidebar:not(.show-sidebar),
+    .sidebar.show-sidebar {
+        animation: none;
+    }
+}

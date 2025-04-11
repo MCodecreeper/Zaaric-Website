@@ -1,0 +1,104 @@
+/* Portfolio Section */
+.portfolio {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+    text-align: center;
+    color: #ffffff;
+}
+
+    .portfolio h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        background-color:  #ffffff;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+.portfolio-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+.portfolio-categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+    .portfolio-card.designing {
+        animation-delay: 0.2s;
+    }
+
+    .portfolio-card.development {
+        animation-delay: 0.4s;
+    }
+
+    .portfolio-card.editing {
+        animation-delay: 0.6s;
+    }
+
+    .portfolio-card h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #ff9f1c;
+    }
+
+    .portfolio-card p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+.portfolio-btn {
+    background: linear-gradient(90deg, #ff512f, #ff9f1c);
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    .portfolio-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(255, 81, 47, 0.4);
+    }
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effects */
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px #2ec4b6;
+}

@@ -1,0 +1,141 @@
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 20px;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    background: linear-gradient(230deg, #1a1a1a 100%, #2ec4b6);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+    .testimonials h2 {
+        font-size: 3rem;
+        color: #ffffff;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #ff512f, #ff9f1c);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.testimonial-card {
+    position: absolute; 
+    top: 0px;
+    bottom: 0px;
+    width: 80%;
+    max-width: 800px;
+    background-color: #494949;
+    padding: 40px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+    .testimonial-card.active {
+        opacity: 1;
+        visibility: visible;
+        animation: fadeIn 2.5s ease-in-out forward;
+    }
+
+    
+
+    .testimonial-card p {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+.quote-icon {
+    font-size: 2rem;
+    color: #2ec4b6;
+    margin: 20px 0;
+    animation: glow 2s infinite alternate ease-in-out;
+}
+
+.testimonial-author {
+    margin-top: 20px;
+}
+
+    .testimonial-author h3 {
+        font-size: 1.8rem;
+        color: #2ec4b6;
+        margin-bottom: 5px;
+    }
+
+    .testimonial-author p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+/* Fade-In and Fade-Out Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Glowing Effect for Quote Icons */
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 5px #ff9f1c);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 20px #ff9f1c);
+    }
+}
+
+
+@media screen and (max-width:678px){
+    .testimonial-card {
+        width: 100%;
+        
+    }
+    .testimonials h2 {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-card p {
+        font-size: 1.2rem;
+
+    }
+
+    .quote-icon {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-author h3{
+        font-size:1.3rem;
+    }
+
+    }
