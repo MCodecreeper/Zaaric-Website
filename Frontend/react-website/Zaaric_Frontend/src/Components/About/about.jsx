@@ -27,6 +27,10 @@ const About = () => {
                         With ZAARIC, you do not just get solutions. You get a trusted technology
                         partner committed to your success. Lets create something extraordinary together!<br></br>
                      </p>
+                     <div className="founder-section">
+                     <h4> Founder and CEO</h4>
+                     <h3> Hamza Kamran </h3>
+                     </div>
                    
                 </div>
                 <div className="about-image">

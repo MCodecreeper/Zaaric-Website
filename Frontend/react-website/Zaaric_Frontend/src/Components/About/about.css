@@ -40,6 +40,31 @@
         text-align:justify;
     }
 
+/* Simple Founder Section Styling */
+.founder-section {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.founder-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.founder-section h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ff9800;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .cta-button {
     display: inline-block;
     background: #ff9800;
@@ -104,5 +129,19 @@
     .about-content h2 {
         margin-top:5rem;
         font-size: 2rem;
+    }
+
+    /* Mobile responsive founder section */
+    .founder-section {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .founder-section h3 {
+        font-size: 1.8rem;
+    }
+
+    .founder-section h4 {
+        font-size: 1rem;
     }
 }
