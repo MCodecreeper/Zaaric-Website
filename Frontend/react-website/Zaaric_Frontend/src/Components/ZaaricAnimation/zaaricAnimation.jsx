@@ -68,6 +68,7 @@ const ZaaricAnimation = () => {
                     Powering Innovation, Crafting Solutions
                 </motion.p>
             )}
+            
         </div>
     );
 };

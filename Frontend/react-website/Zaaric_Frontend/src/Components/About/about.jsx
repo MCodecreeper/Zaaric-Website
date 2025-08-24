@@ -9,23 +9,16 @@ const About = () => {
 
         < section className = "about" >
                 <div className="about-content">
-                    <h2>About Us</h2>
+                    <h2>OUR PHILOSOPHY</h2>
                     <p>
-                        At ZAARIC, we do not just build digital solutions. we craft
-                        experiences that redefine innovation and technology. Our team
-                        of visionary developers, designers, and branding experts is
-                        dedicated to transforming ideas into reality, delivering
-                        high-quality services that make businesses stand out in a competitive landscape.
+                    At Zaaric, we believe that ideas are the seeds of transformation. Our philosophy is grounded in the principle that technology, when combined with strategic vision, has the power to convert abstract concepts into market-ready solutions that drive meaningful impact.
+
+                    We embrace a client-first mindset, where understanding the unique challenges and goals of each partner is paramount. Every project is approached with precision, creativity, and a commitment to excellence, ensuring that solutions are not only functional but also scalable, sustainable, and forward-looking.
                     </p>
                      <p>
-                        Our mission goes beyond just offering services. We aim to
-                        bridge the gap between agencies and clients by ensuring seamless
-                        communication, transparency, and top-tier execution. We believe
-                        that every brand has a unique story, and we are here to amplify
-                        that story with cutting-edge web development, stunning UI/UX design,
-                        and powerful branding strategies.
-                        With ZAARIC, you do not just get solutions. You get a trusted technology
-                        partner committed to your success. Lets create something extraordinary together!<br></br>
+                     Innovation at Zaaric is purposeful. We don’t pursue technology for its own sake; we leverage it to solve real-world problems, streamline processes, and unlock new opportunities. Collaboration, transparency, and ethical responsibility guide every decision, reflecting our unwavering dedication to creating value that endures.
+
+                     In essence, Zaaric exists to bridge the gap between vision and execution, transforming ambitious ideas into tangible outcomes while setting new standards in technology-driven enterprise solutions.
                      </p>
                      <div className="founder-section">
                      <h4> Founder and CEO</h4>

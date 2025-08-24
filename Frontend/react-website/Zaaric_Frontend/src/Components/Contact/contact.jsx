@@ -78,13 +78,14 @@ const Contact = () => {
                         className='select-package'
                   >
                       <option value="Custom" disabled>
-                          Select Package
+                          Select Service
                       </option>
-                      <option value="Youtuber">Youtuber</option>
-                      <option value="Businessman">Businessman</option>
-                      <option value="Entrepreneur">Entrepreneur</option>
-                      <option value="Social Media Influencer">Social Media Influencer</option>
-                      <option value="None">None</option>
+                      <option value="Agentic AI Solutions">Agentic AI Solutions</option>
+                      <option value="AI Automation">AI Automation</option>
+                      <option value="Custom Web Solution">Custom Web Solution</option>
+                      <option value="Ideo to Tech Product">Ideo to Tech Product</option>
+                      <option value="Business Consulation in Tech">Business Consulation in Tech</option>
+                      <option value="Application for job">Application for job</option>
                   </select>
               </div>
               <div className="form-group">

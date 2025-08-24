@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import "./Testimonials.css"; // Import the new CSS file
+import React, { useEffect, useState, forwardRef } from "react";
+import "./testimonials.css"; // Import the new CSS file
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa"; // Import quote icons
 
 const testimonials = [
@@ -29,7 +29,7 @@ const testimonials = [
     },
 ];
 
-const TestimonialSection = () => {
+const TestimonialSection = forwardRef((props, ref) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [exitIndex, setExitIndex] = useState(null);
 
@@ -43,7 +43,7 @@ const TestimonialSection = () => {
     }, [activeIndex]);
 
     return (
-        <section className="testimonials">
+        <section className="testimonials" ref={ref}>
             <h2>What Our Clients Say</h2>
             <div className="testimonial-container">
                 {testimonials.map((testimonial, index) => (
@@ -67,6 +67,6 @@ const TestimonialSection = () => {
             </div>
         </section>
     );
-};
+});
 
 export default TestimonialSection;

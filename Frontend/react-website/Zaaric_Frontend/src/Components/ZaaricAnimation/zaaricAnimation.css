@@ -1,25 +1,43 @@
 .zaaric-container {
     position: relative;
-    left: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 110vh;
-    width: 110%;
-    background: #1a1a1a; /* Dark background for contrast */
+    min-height: 130vh;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 80px 20px;
     color: white;
-    font-family: 'Arial', sans-serif;
-    margin-top: 10rem;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 6rem;
+    overflow: hidden;
+}
+
+.zaaric-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(10,10,10,0) 8%),
+        radial-gradient(circle at 50% 50%, rgba(46,196,182,0.15), rgba(0,0,0,0) 60%),
+        linear-gradient(180deg, rgba(10,10,10,0) 92%, rgba(10,10,10,0) 100%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="none"/><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(46,196,182,0.27)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    background-size: cover, cover, cover, auto;
+    opacity: 1;
+    z-index: -1;
 }
 
 .zaaric-heading {
-    font-size: 5rem;
-    font-weight: bold;
+    font-size: 4.5rem;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    margin-bottom: 1rem;
-    margin-top: -9rem;
+    margin-bottom: 0.5rem;
 }
 
 .letter {
@@ -28,21 +46,40 @@
 }
 
 .sub-heading {
-    font-size: 1.5rem;
-    color: #888;
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.8);
     text-align: center;
+}
+
+.zaaric-cta {
+    background: linear-gradient(90deg, #2ec4b6, #00a899);
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+    border-radius: 999px;
+    box-shadow: 0 5px 15px rgba(46, 196, 182, 0.25);
+
+}
+
+.zaaric-cta:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
 }
 
 @media screen and (max-width: 768px){
     .zaaric-heading {
         font-size:3rem;
-        margin-top:2rem;
     }
     .sub-heading {
         font-size:1rem;
     }
+    .zaaric-cta{
+        position: relative;
+        bottom:3rem;
+        height: 3rem;
     }
-    .zaaric-container {
-        margin-left: -25px;
-     
-    }
+}

@@ -1,18 +1,21 @@
-header {
-    background: linear-gradient(135deg, rgba(1, 22, 39, 0.85) 25%, rgba(46, 196, 182, 0.4) 75%);
-    backdrop-filter: blur(15px); /* Increased blur for a stronger glass effect */
-    border-bottom: 2px solid rgba(255, 159, 28, 0.4); /* More pronounced orange tint */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-    padding: 10px 0; /* Reduced padding */
+/* Base header: transparent until scrolled */
+.header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2000;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
+    padding: 10px 0;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* When scrolled: turn black */
+  .header.scrolled {
+    background: #000;               /* solid black */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  
 .navBar {
     max-width: 1200px;
     margin: 0 auto;
@@ -29,7 +32,6 @@ header {
     box-shadow: none;
 }
 
-
 .navMenu {
     display: flex;
     list-style: none;
@@ -38,119 +40,101 @@ header {
     padding: 0;
     align-items: center;
 }
-    /* Individual Menu Items */
-    
 
-        .navMenu li {
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 5px 12px; /* Reduced padding */
-            display: block;
-            position: relative;
-        }
-        .navMenu li a{
-            color: white;
-        }
-
-
-            /* Hover Effect */
-            .navMenu li :hover {
-                color: #2ec4b6;
-            }
-
-            /* Active Line Effect */
-            .navMenu li ::after {
-                content: "";
-                width: 80%;
-                height: 2px;
-                background: #ff9f1c;
-                position: absolute;
-                left: 4px;
-                bottom: -5px;
-                transform: scaleX(0);
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .navMenu li :hover::after {
-                transform: scaleX(1);
-            }
-
-
-
-/* Portfolio button */
-
-.pf_1{
-    margin-left: 10rem;
-    text-decoration:none;
-
+/* Individual Menu Items */
+.navMenu li {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 12px; /* Reduced padding */
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+.navMenu li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    filter: drop-shadow(0 0 6px #000000) drop-shadow(0 0 15px #000000b6);
+}
 
-.pf section {
+/* Active Line Effect */
+.navMenu li::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff512f, #ff9f1c);
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.navMenu li:hover::after {
+    width: 80%;
+}
+
+.navMenu li:hover a {
+    color: #ff9f1c;
+}
+
+/* Portfolio button */
+.pf_1 {
+    margin-left: 10rem;
+    text-decoration: none;
+}
+
+.pf_1 section {
     background: linear-gradient(90deg, #ff512f, #ff9f1c);
     color: white;
     font-weight: bold;
     border: none;
     padding: 8px 16px;
-    border-radius: 16px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     outline: none; /* Remove default outline */
-    box-shadow: none; /* Remove any default box shadow */
+    box-shadow: 0 4px 10px rgba(255, 159, 28, 0.3);
 }
 
-    .pf section:hover {
-        transform: scale(1.05);
-    }
+.logo img {
+    filter: drop-shadow(0 0 3px #000000) drop-shadow(0 0 5px #000000b6);
+    margin-left: -95px; /* moves logo more to the left */
+    margin-right: 30rem;
+}
 
-.pf li ::after {
+.pf_1 section:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 159, 28, 0.5);
+}
+
+.pf li::after {
     content: none;
-    display:none;
+    display: none;
 }
+
 .pf li:hover {
     all: unset; /* Removes all inherited styles */
-    pointer-events:none;
+    pointer-events: none;
 }
 
-
-    .pf section a {
-        color: white; /* Ensure the link text is white */
-        text-decoration: none; /* Remove underline */
-    }
-
-        .pf section a:hover {
-            color: white; /* Ensure the link text remains white on hover */
-        }
-
-
-
-@keyframes slideIn {
-    from {
-        right: -250px;
-    }
-
-    to {
-        right: 0;
-    }
+.pf_1 section a {
+    color: white; /* Ensure the link text is white */
+    text-decoration: none; /* Remove underline */
 }
 
-@keyframes slideOut {
-    from {
-        right: 0;
-    }
-
-    to {
-        right: -250px;
-    }
+.pf_1 section a:hover {
+    color: white; /* Ensure the link text remains white on hover */
 }
 
 .sidebar {
     position: fixed;
     top: 0;
-    right: -250px; /* Initially hidden */
+    right: 0;
     height: 100vh;
     width: 250px;
     z-index: 999;
@@ -161,71 +145,80 @@ header {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    transition: right 0.5s ease-in-out; /* Smooth transition */
+    clip-path: circle(0 at 100% 50%);
+    transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.show-sidebar {
-    right: 0;
-    animation: slideIn 0.5s ease-in-out forwards;
+.sidebar.show-sidebar {
+    clip-path: circle(150% at 100% 50%);
 }
 
-.sidebar:not(.show-sidebar) {
-    animation: slideOut 0.5s ease-in-out forwards;
-}
-
-.sidebar li{
-    width: 100%;
-
-}
-.sidebar li a:hover{
-    color: #ffffff;
-}
-    .sidebar li:hover {
-        background: #ff9d1c;
-    }
-
-/* Responsive Design */
-
-{ /*For Mobile screen */
-}
-@media screen and (max-width: 780px) {
-    .hidePCnavOnMobile {
-        display: none
-    }
-    .logo{
-       transform:scale(0.7)
-    }
-    .navBar{
-        height: 40px;
-    }
-
-}
-
-{/*For PC screen */}
-@media screen and (min-width: 780px) {
-    .showOnMobile{
-        display: none;
-    }
-
-}
 .sidebar li {
+    width: 100%;
     text-align: left;
     padding-left: 20px; /* Add some padding on the left for better spacing */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar li:hover {
+    background: rgba(255, 159, 28, 0.2);
+    transform: translateX(5px);
 }
 
 .sidebar li a {
     display: block;
     width: 100%;
     text-align: left;
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-@media screen and (min-width: 780px) {
+
+
+.sidebar li a:hover {
+    color: #ff9f1c;
+}
+.navBarClose{
+    position:relative;
+    left: 11rem;
+    top: 10px;
+}
+/* Responsive Design */
+@media screen and (max-width: 780px) {
+    .hidePCnavOnMobile {
+        display: none;
+    }
+    .logo {
+        transform: scale(0.7);
+    }
+    .navBar {
+        height: 40px;
+    }
+    .logo img{
+        margin-left: -1rem;
+    }
+    .logo img{
+        margin-left: -2rem;
+        margin-right: 0rem;
+        filter: drop-shadow(0 0 1px #00e5ff) drop-shadow(0 0 3px #00e5ff);
+    }
+    .navMenu li a{
+        filter: none;
+    }
+   
+}
+
+@media screen and (min-width: 781px) {
+    .showOnMobile {
+        display: none;
+    }
     .sidebar {
         display: none !important; /* Force hide sidebar on desktop */
     }
+}
 
-    /* Prevent sidebar animations from running on desktop */
-    .sidebar:not(.show-sidebar),
-    .sidebar.show-sidebar {
-        animation: none;
+@media screen and (max-width: 360px){
+    .logo img{
+        margin-left: -2rem;
     }
 }
